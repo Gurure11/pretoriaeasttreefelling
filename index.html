@@ -4,53 +4,110 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nacho Digital Online Marketing | Google Ads, SEO & Website Development South Africa</title>
+<title>Nacho Digital Online Marketing | SEO, Google Ads & Website Development South Africa</title>
 
-<meta name="description" content="Nacho Digital Online Marketing based in Bloemfontein, Welkom and Vereeniging offers Google Ads, Facebook Ads, Instagram Ads, SEO optimisation, YouTube Ads, TikTok Ads, website development, e-commerce, apps and online learning platforms. Over 10 years experience ranking businesses top of Google search results.">
-<meta name="keywords" content="Digital Marketing Bloemfontein, Google Ads South Africa, SEO optimisation, Facebook Ads, Instagram Ads, Website Development South Africa, E-commerce websites, App Development, YouTube Ads, TikTok Ads, Rank top of Google search, Online marketing Vereeniging, Digital marketing Welkom">
+<meta name="description" content="Nacho Digital Online Marketing in Bloemfontein, Welkom & Vereeniging provides Google Ads, SEO optimisation, Facebook & Instagram Ads, YouTube & TikTok Ads, Website & App Development. Rank top of Google search results today.">
+<meta name="keywords" content="Digital Marketing Bloemfontein, Google Ads South Africa, SEO Company Vereeniging, Website Development South Africa, Facebook Ads, YouTube Ads, TikTok Ads, Rank Top Google">
 <meta name="author" content="Nacho Digital Online Marketing">
 
-<meta property="og:title" content="Nacho Digital Online Marketing - Rank Top of Google">
-<meta property="og:description" content="Professional Google Ads, SEO, Website & App Development services in South Africa.">
-<meta property="og:type" content="website">
+<!-- Open Graph -->
+<meta property="og:title" content="Nacho Digital - Rank Top of Google">
+<meta property="og:description" content="Professional Digital Marketing Agency in South Africa">
+
+<!-- Google Structured Schema Markup -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "MarketingAgency",
+ "name": "Nacho Digital Online Marketing",
+ "image": "https://images.unsplash.com/photo-1557838923-2985c318be48",
+ "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "92 Lombard Avenue",
+   "addressLocality": "Bloemfontein",
+   "addressCountry": "South Africa"
+ },
+ "telephone": "+27612564814",
+ "areaServed": ["Bloemfontein","Welkom","Vereeniging"],
+ "sameAs": [
+   "https://facebook.com/",
+   "https://instagram.com/"
+ ]
+}
+</script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+:root{
+--blue:#0a3d91;
+--gold:#f5b400;
+--light:#f4f6fb;
+}
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif;}
-body{background:#f4f6f9;color:#333;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI, sans-serif;}
+body{background:var(--light);color:#333;}
 html{scroll-behavior:smooth;}
 
+/* HEADER */
 header{
-position:fixed;
-width:100%;
-background:#000;
+background:var(--blue);
+color:#fff;
 padding:15px 5%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+position:fixed;
+width:100%;
 z-index:1000;
 }
 
-header h1{color:#fff;font-size:22px;}
+.logo{font-size:22px;font-weight:bold;color:var(--gold);}
+
+nav{
+display:flex;
+gap:25px;
+}
+
 nav a{
 color:#fff;
 text-decoration:none;
-margin-left:20px;
-font-size:15px;
-transition:0.3s;
+font-weight:500;
 }
-nav a:hover{color:#00c3ff;}
 
+nav a:hover{color:var(--gold);}
+
+.menu-toggle{
+display:none;
+font-size:26px;
+cursor:pointer;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+nav{
+position:absolute;
+top:70px;
+right:0;
+background:var(--blue);
+flex-direction:column;
+width:220px;
+display:none;
+padding:20px;
+}
+nav.active{display:flex;}
+.menu-toggle{display:block;}
+}
+
+/* HERO */
 .hero{
 height:100vh;
 position:relative;
 display:flex;
-justify-content:center;
 align-items:center;
-color:#fff;
+justify-content:center;
 text-align:center;
+color:#fff;
 overflow:hidden;
 }
 
@@ -65,42 +122,69 @@ z-index:-1;
 }
 
 .hero-content{
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.65);
 padding:40px;
 border-radius:10px;
+animation:fadeIn 2s ease-in-out;
 }
 
-.hero h2{font-size:40px;margin-bottom:20px;}
-.hero p{font-size:18px;margin-bottom:25px;}
+.hero h1{font-size:40px;margin-bottom:15px;color:var(--gold);}
+.hero p{margin-bottom:20px;}
+
 .btn{
-background:#00c3ff;
-color:#fff;
+background:var(--gold);
+color:#000;
 padding:12px 25px;
+border-radius:30px;
 text-decoration:none;
-border-radius:5px;
-transition:0.3s;
+font-weight:bold;
 }
-.btn:hover{background:#008bb3;}
 
-section{padding:80px 8%;}
-section h2{text-align:center;margin-bottom:40px;font-size:32px;}
+.btn:hover{background:#ffd54d;}
 
-.about p{max-width:900px;margin:auto;text-align:center;line-height:1.7;font-size:17px;}
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
 
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+/* CHARACTER ANIMATION */
+.character{
+position:absolute;
+bottom:30px;
+right:30px;
+width:150px;
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+}
+
+/* SECTIONS */
+section{padding:90px 8%;}
+section h2{text-align:center;color:var(--blue);margin-bottom:40px;}
+
+/* CAROUSEL */
+.carousel{
+display:flex;
+overflow:hidden;
+position:relative;
+}
+
+.carousel-track{
+display:flex;
+transition:transform 0.5s ease;
 }
 
 .service-card{
+min-width:300px;
+margin:0 15px;
 background:#fff;
 border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 overflow:hidden;
-transition:0.4s;
 }
-.service-card:hover{transform:translateY(-10px);}
 
 .service-card img{
 width:100%;
@@ -109,29 +193,41 @@ object-fit:cover;
 }
 
 .service-card div{padding:20px;}
-.service-card h3{margin-bottom:10px;color:#00aaff;}
 
+.carousel-buttons{
+text-align:center;
+margin-top:20px;
+}
+
+.carousel-buttons button{
+background:var(--blue);
+color:#fff;
+border:none;
+padding:10px 15px;
+margin:5px;
+cursor:pointer;
+}
+
+/* CONTACT */
 .contact-form{
 max-width:600px;
 margin:auto;
 }
 
-.contact-form input, .contact-form textarea{
+.contact-form input,.contact-form textarea{
 width:100%;
 padding:12px;
 margin-bottom:15px;
-border:1px solid #ccc;
 border-radius:5px;
+border:1px solid #ccc;
 }
 
 .contact-form button{
 width:100%;
 padding:12px;
-background:#00c3ff;
+background:var(--gold);
 border:none;
-color:#fff;
-font-size:16px;
-border-radius:5px;
+font-weight:bold;
 cursor:pointer;
 }
 
@@ -144,115 +240,101 @@ margin-top:40px;
 
 iframe{width:100%;height:300px;border:0;border-radius:10px;}
 
+/* FOOTER */
 footer{
-background:#000;
+background:var(--blue);
 color:#fff;
-padding:30px 8%;
 text-align:center;
+padding:30px;
 }
 
 footer .social i{
 margin:0 10px;
 font-size:20px;
-cursor:pointer;
-transition:0.3s;
+color:var(--gold);
 }
-footer .social i:hover{color:#00c3ff;}
-
-@media(max-width:768px){
-.hero h2{font-size:28px;}
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Nacho Digital</h1>
-<nav>
-<a href="#about">About</a>
+<div class="logo">Nacho Digital</div>
+<div class="menu-toggle" onclick="toggleMenu()">
+<i class="fas fa-bars"></i>
+</div>
+<nav id="navMenu">
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
 <video autoplay muted loop>
-<source src="https://cdn.coverr.co/videos/coverr-digital-marketing-technology-1565/1080p.mp4" type="video/mp4">
+<source src="images/libre.mp4" type="video/mp4">
 </video>
+
 <div class="hero-content">
-<h2>Rank Your Business Top of Google</h2>
-<p>Professional Digital Marketing, SEO & Website Development in South Africa</p>
-<a href="#contact" class="btn">Get Free Consultation</a>
+<h1>Rank Top of Google Search</h1>
+<p>Professional SEO, Google Ads & Website Development in South Africa</p>
+<a href="#contact" class="btn">Start Growing Today</a>
 </div>
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="character" alt="Marketing Character">
+
 </section>
 
-<section id="about" class="about">
-<h2>About Nacho Digital Online Marketing</h2>
-<p>
-Nacho Digital Online Marketing is a leading digital marketing agency based in Bloemfontein, Welkom and Vereeniging, South Africa. 
-With over 10 years of experience in Google Ads management, SEO optimisation, Facebook and Instagram advertising, YouTube marketing, TikTok advertising and website development, we help businesses dominate top of Google search results.
-We specialise in professional website development, e-commerce online stores, business apps, online learning platforms and high-converting video ads for TV and social media marketing.
-Our mission is simple: Increase traffic, generate leads, and grow your revenue through powerful online marketing strategies that deliver measurable results.
-</p>
-</section>
-
+<!-- SERVICES -->
 <section id="services">
 <h2>Our Digital Marketing Services</h2>
-<div class="services">
+
+<div class="carousel">
+<div class="carousel-track" id="carouselTrack">
 
 <div class="service-card">
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Website Development">
+<img src="images/nacho.jpg">
 <div>
 <h3>Website Development</h3>
-<p>Modern responsive websites, e-commerce stores, business apps and online learning platforms built for performance and SEO ranking.</p>
+<p>SEO-ready business websites, e-commerce stores & apps.</p>
 </div>
 </div>
 
 <div class="service-card">
-<img src="https://images.unsplash.com/photo-1557838923-2985c318be48" alt="Google Ads">
+<img src="images/nacho1.png">
 <div>
 <h3>Google Ads</h3>
-<p>Professional Google Ads campaigns that place your business at the top of Google search results and generate instant leads.</p>
+<p>Top of page paid search campaigns that generate leads fast.</p>
 </div>
 </div>
 
 <div class="service-card">
-<img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb" alt="Social Media Ads">
-<div>
-<h3>Facebook & Instagram Ads</h3>
-<p>High-converting Facebook and Instagram video ads targeting the right audience to grow your brand visibility and sales.</p>
-</div>
-</div>
-
-<div class="service-card">
-<img src="https://images.unsplash.com/photo-1562577309-2592ab84b1bc" alt="SEO Optimisation">
+<img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb">
 <div>
 <h3>SEO Optimisation</h3>
-<p>Search Engine Optimisation strategies that rank your business organically on Google’s first page for competitive keywords.</p>
+<p>Rank organically on Google with powerful SEO strategies.</p>
 </div>
 </div>
 
 <div class="service-card">
-<img src="https://images.unsplash.com/photo-1581090700227-4c4f50f1d3d0" alt="YouTube Ads">
+<img src="https://images.unsplash.com/photo-1581090700227-4c4f50f1d3d0">
 <div>
-<h3>YouTube & TikTok Ads</h3>
-<p>Engaging YouTube and TikTok video ads that increase brand awareness and drive conversions through video marketing.</p>
-</div>
-</div>
-
-<div class="service-card">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Professional Video Ads">
-<div>
-<h3>Professional Video Production</h3>
-<p>High-quality TV and social media video advertisements designed to convert viewers into customers.</p>
+<h3>Video & Social Media Ads</h3>
+<p>Facebook, Instagram, YouTube & TikTok video campaigns.</p>
 </div>
 </div>
 
 </div>
+</div>
+
+<div class="carousel-buttons">
+<button onclick="moveSlide(-1)">Prev</button>
+<button onclick="moveSlide(1)">Next</button>
+</div>
+
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact Us</h2>
 
@@ -260,42 +342,51 @@ Our mission is simple: Increase traffic, generate leads, and grow your revenue t
 <form onsubmit="sendToWhatsApp(); return false;">
 <input type="text" id="name" placeholder="Your Name" required>
 <input type="email" id="email" placeholder="Your Email" required>
-<textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-<button type="submit">Send Message via WhatsApp</button>
+<textarea id="message" placeholder="Your Message" required></textarea>
+<button type="submit">Send via WhatsApp</button>
 </form>
 </div>
 
 <div class="maps">
-<iframe src="https://maps.google.com/maps?q=92%20Lombard%20Avenue%20Bloemfontein&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-<iframe src="https://maps.google.com/maps?q=15%20Leslie%20Avenue%20Vereeniging&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+<iframe src="https://maps.google.com/maps?q=92%20Lombard%20Avenue%20Bloemfontein&output=embed"></iframe>
+<iframe src="https://maps.google.com/maps?q=15%20Leslie%20Avenue%20Vereeniging&output=embed"></iframe>
 </div>
-
 </section>
 
 <footer>
-<p>📍 92 Lombard Avenue, Bloemfontein | 15 Leslie Avenue, Vereeniging</p>
+<p>📍 92 Lombard Ave, Bloemfontein | 15 Leslie Ave, Vereeniging</p>
 <p>📞 061 256 4814</p>
-
 <div class="social">
-<a href="#"><i class="fab fa-facebook"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
-<a href="#"><i class="fab fa-youtube"></i></a>
-<a href="#"><i class="fab fa-tiktok"></i></a>
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-youtube"></i>
+<i class="fab fa-tiktok"></i>
 </div>
-
-<p>&copy; 2026 Nacho Digital Online Marketing. All Rights Reserved.</p>
+<p>© 2026 Nacho Digital Online Marketing</p>
 </footer>
 
 <script>
+function toggleMenu(){
+document.getElementById("navMenu").classList.toggle("active");
+}
+
+let index=0;
+function moveSlide(direction){
+const track=document.getElementById("carouselTrack");
+const totalSlides=track.children.length;
+index+=direction;
+if(index<0) index=totalSlides-1;
+if(index>=totalSlides) index=0;
+track.style.transform="translateX(-"+(index*330)+"px)";
+}
+
 function sendToWhatsApp(){
 var name=document.getElementById("name").value;
 var email=document.getElementById("email").value;
 var message=document.getElementById("message").value;
 
 var url="https://wa.me/27612564814?text="
-+"Name: "+name+"%0a"
-+"Email: "+email+"%0a"
-+"Message: "+message;
++"Name: "+name+"%0aEmail: "+email+"%0aMessage: "+message;
 
 window.open(url,'_blank');
 }
